@@ -69,8 +69,35 @@ public class Punto
 		return str;
 	}
 
+	/**
+	 * Devuelve la distancia del punto al origen (0,0)
+	 */
+	public double getDistanciaDesdeOrigen(){
+		return Math.sqrt(x*x + y*y);
+	}
+
+	/**
+	 * Devuelve la distancia entre el punto actual y el punto p
+	 */
+	public double getDistanciaDesde(Punto p){
+		//Uso variables para simplificar la expresión de la fórmula
+		int diferenciasX = this.x - p.getX();
+		int diferenciasY = this.y - p.getY();
+
+		//Esta vez uso Math.pow
+		return Math.sqrt(Math.pow(diferenciasX,2) + Math.pow(diferenciasY,2));
+	}
+
 	static void main(String[] args) {
 		//Podéis hacer las pruebas de esta clase aquí, creando una instancia de Punto.
+		Punto punto1 = new Punto(5, 10);
+		Punto punto2 = new Punto(-3, 12);
+
+		System.out.println("Puunto 1: ");
+		System.out.println(punto1); //Como tiene toString, no hace falta indicar explícitamente la llamada
+
+		System.out.println("Punto 2: ");
+		System.out.println(punto2);
 	}
 
 }
