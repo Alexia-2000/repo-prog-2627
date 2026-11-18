@@ -24,8 +24,8 @@ public class Fraccion
      */
     public Fraccion(int numerador, int denominador)
     {
-        
-       
+        this.numerador = numerador;
+        this.denominador = denominador;
     }
 
 
@@ -50,7 +50,7 @@ public class Fraccion
      */
     public void setNumerador(int numerador)
     {
-        
+        this.numerador = numerador;
     }
     
     /**
@@ -58,7 +58,7 @@ public class Fraccion
      */
     public void setDenominador(int denominador)
     {
-       
+       this.denominador = denominador;
     }  
     
     /**
