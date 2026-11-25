@@ -35,7 +35,11 @@ public class DemoWhileUno
      */
     public void ejemplo01()
     {
-
+        int contadorSaludos = 0;
+        while(contadorSaludos < 10){
+            contadorSaludos++;
+            System.out.println("Hola " + contadorSaludos);
+        }
     }
 
     /**
@@ -45,7 +49,12 @@ public class DemoWhileUno
      */
     public void ejemplo02()
     {
-
+        int tiradas = 1;
+        while(tiradas <= 10){
+            moneda.tirar();
+            System.out.printf("Ha salido cara? --> %b%n", moneda.esCara());
+            tiradas++;
+        }
     }
 
     /**
@@ -56,7 +65,18 @@ public class DemoWhileUno
      */
     public void ejemplo03()
     {
+        int tiradas = 30, caras = 0, cruces = 0;
+        while (tiradas > 0){
+            tiradas--;
 
+            moneda.tirar();
+            if(moneda.esCara())
+                caras++;
+            else
+                cruces++;
+        }
+
+        System.out.printf("Han salido %d caras y %d cruces", caras, cruces);
     }
 
     /**
@@ -66,7 +86,15 @@ public class DemoWhileUno
      */
     public void ejemplo04()
     {
+        int suma = 0, contador = 20;
+        long producto = 1;
 
+        while(contador >= 1){
+            suma += contador;
+            producto *= contador;
+            contador--;
+        }
+        System.out.printf("La suma es %d y el producto %,d", suma, producto);
     }
 
     /**
@@ -329,6 +357,8 @@ public class DemoWhileUno
 
     static void main(String[] args) {
         //TODO añadir aqui el codigo de pruebas: crear instancia y llamar a las funciones
+        DemoWhileUno miDemo = new DemoWhileUno();
+        miDemo.ejemplo04();
     }
 
 }
